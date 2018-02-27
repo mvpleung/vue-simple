@@ -15,7 +15,7 @@ npm run dev
  ![image](https://github.com/mvpleung/vue-simple/blob/master/art/mine.jpg)
  ![image](https://github.com/mvpleung/vue-simple/blob/master/art/login.jpg)
  ![image](https://github.com/mvpleung/vue-simple/blob/master/art/verify.jpg)
- ![image](https://github.com/mvpleung/vue-simple/blob/master/art/pay.jpg){:height="50%" width="50%"}
+ ![image](https://github.com/mvpleung/vue-simple/blob/master/art/pay.jpg)
  ![image](https://github.com/mvpleung/vue-simple/blob/master/art/oauth.jpg) 
 
 
