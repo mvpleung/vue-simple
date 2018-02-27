@@ -10,25 +10,12 @@ npm run dev
 
 ### 截图
 
-首页
  ![image](https://github.com/mvpleung/vue-simple/blob/master/art/home.jpg)
-
-车牌
  ![image](https://github.com/mvpleung/vue-simple/blob/master/art/vehicle.jpg)
-
-我的
  ![image](https://github.com/mvpleung/vue-simple/blob/master/art/mine.jpg)
-
-登录
  ![image](https://github.com/mvpleung/vue-simple/blob/master/art/login.jpg)
-
-校验
  ![image](https://github.com/mvpleung/vue-simple/blob/master/art/verify.jpg)
-
-支付
- ![image](https://github.com/mvpleung/vue-simple/blob/master/art/pay.jpg) 
-
-公共授权
+ ![image](https://github.com/mvpleung/vue-simple/blob/master/art/pay.jpg){:height="50%" width="50%"}
  ![image](https://github.com/mvpleung/vue-simple/blob/master/art/oauth.jpg) 
 
 
