@@ -1,0 +1,52 @@
+[
+  {
+    "path": "*",
+    "name": "404",
+    "component": "components/common/404"
+  },
+  {
+    "path": "/oauth",
+    "name": "oauth",
+    "component": "/oauth/oauth",
+    "meta": {
+      "requireAuth": false
+    }
+  },
+  {
+    "path": "/error",
+    "name": "error",
+    "component": "components/common/error"
+  },
+  {
+    "path": "/login",
+    "name": "login",
+    "title": "登录",
+    "component": "/login/login"
+  },
+  {
+    "path": "/verify",
+    "name": "verify",
+    "title": "校验测试",
+    "component": "components/common/verify"
+  },
+  {
+    "path": "/homePage",
+    "name": "homePage",
+    "title": "首页",
+    "component": "/home/homePage",
+    "meta": {
+      "requireAuth": true,
+      "keepAlive": true
+    }
+  },
+  {
+    "path": "/minePage",
+    "name": "minePage",
+    "title": "个人中心",
+    "component": "/mine/minePage",
+    "meta": {
+      "requireAuth": true,
+      "keepAlive": true
+    }
+  }
+]

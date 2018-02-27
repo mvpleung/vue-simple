@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <title>vue-wap</title>
+    <script src="//g.alicdn.com/fdilab/lib3rd/viewport-units-buggyfill/0.6.2/??viewport-units-buggyfill.hacks.min.js,viewport-units-buggyfill.min.js"></script>
+</head>
+
+<body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+    <script>
+        window.onload = function () {
+            window.viewportUnitsBuggyfill.init({
+                hacks: window.viewportUnitsBuggyfillHacks
+            });
+            console.log({
+                'Windows_DPI': window.devicePixelRatio,
+                'User_Agent': window.navigator.userAgent,
+                'Screen_Width': window.screen.width,
+                'Screen_Height': window.screen.height,
+                'Window_Width': window.innerWidth,
+                'Window_Height': window.innerHeight
+            })
+        }
+    </script>
+</body>
+
+</html>

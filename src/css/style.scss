@@ -1,0 +1,281 @@
+@import url('//at.alicdn.com/t/font_352963_jvyeag6321sv2t9.css'); //阿里矢量图
+/* v2.0 | 20110126
+  http://meyerweb.com/eric/tools/css/reset/ 
+  License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+html,
+body {
+  margin: 0 auto;
+  padding: 0 auto;
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+[role='button'],
+input[type='button'],
+button {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  background: none;
+  border: 0;
+  line-height: inherit;
+  overflow: visible;
+  padding: 0;
+  -webkit-appearance: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+//去掉手机上点击时出现的阴影
+a {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+}
+
+.hide {
+  display: none;
+}
+
+//修复弹层滚动穿透
+.modal-open-helper {
+  position: fixed;
+  width: 100%;
+}
+
+/*********font-size*********/
+.font16 {
+  font-size: 16px;
+}
+
+.font18 {
+  font-size: 18px;
+}
+
+.font12 {
+  font-size: 12px;
+}
+
+/*********color*********/
+.color-red {
+  color: rgb(255, 76, 83);
+}
+.color-gray {
+  color: gray;
+}
+
+/*********Scss**********/
+$brower-default-font-size: 16px !default;
+// px 转换 rem，单位 px
+@function px2rem($px) {
+  @return strip-units($px) / strip-units($brower-default-font-size) * 1rem;
+}
+@function strip-units($number) {
+  @return $number / ($number * 0 + 1);
+}
+
+/**
+ * rem 批量计算 px，示例 @include remCalc(padding, 5, 4, 3, 1)
+ * @params $property 属性名（width、height等）
+ * @params $values 属性值，可以是多个，单位 rem
+ */
+@mixin remCalc($property, $values...) {
+  $max: length($values);
+  $pxValues: '';
+  $remValues: '';
+
+  @for $i from 1 through $max {
+    $value: strip-units(nth($values, $i));
+    $brower-default-font-size: strip-units($brower-default-font-size);
+    $pxValues: #{$pxValues + $value * $brower-default-font-size}px;
+
+    @if $i < $max {
+      $pxValues: #{$pxValues + ' '};
+    }
+  }
+
+  @for $i from 1 through $max {
+    $value: strip-units(nth($values, $i)); //返回 $i 的值，并去除后缀单位
+    $remValues: #{$remValues + $value}rem;
+
+    @if $i < $max {
+      $remValues: #{$remValues + ' '};
+    }
+  }
+
+  #{$property}: $pxValues;
+  #{$property}: $remValues;
+}
+
+/**
+ * px 批量计算 rem，示例 @include calcRem(padding, 5, 4, 3, 1)
+ * @params $property 属性名（width、height等）
+ * @params $values 属性值，可以是多个，单位 px
+ */
+@mixin calcRem($property, $values...) {
+  $max: length($values);
+  $pxValues: ();
+  $remValues: ();
+
+  @for $i from 1 through $max {
+    $value: strip-units(nth($values, $i)); //取出 i 位置的值，并去除单位
+    $pxValues: append($pxValues, $value + px);
+  }
+
+  @for $i from 1 through $max {
+    $remValues: append($remValues, px2rem(nth($values, $i)));
+  }
+
+  #{$property}: $pxValues;
+  #{$property}: $remValues;
+}
+//处理 1px 边框
+@svg 1px-border {
+  @rect {
+    fill: var(--color, black);
+    width: 100%;
+    height: 100%;
+  }
+}
+.border_1px {
+  background: white svg(1px-border param(--color#00b1ff));
+}

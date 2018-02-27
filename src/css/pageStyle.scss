@@ -1,0 +1,120 @@
+@import url('//at.alicdn.com/t/font_565203_keyfjyylmj603sor.css');
+.page-header {
+  .page-header-title {
+    color: rgb(75, 74, 75);
+    padding: 15px 0 15px 10px;
+    font-size: 16px;
+  }
+}
+.page-container {
+  .mint-cell-wrapper {
+    background: none;
+    border-bottom: 1px solid #e8e8e8;
+    .mint-cell-title {
+      .mint-cell-text {
+        font-size: 15px;
+        white-space: nowrap;
+        color: rgb(181, 178, 180);
+      }
+    }
+    .mint-cell-value {
+      font-size: 15px;
+      span:not([class]) {
+        color: #666;
+      }
+      .mint-field-core {
+        color: #666;
+        text-align: right;
+      }
+      a {
+        color: rgb(100, 52, 226);
+        text-decoration: none;
+      }
+    }
+    .mint-checkbox-label {
+      font-size: 90%;
+    }
+  }
+  .mint-cell--redvalue {
+    .mint-cell-wrapper {
+      .mint-cell-value {
+        span {
+          color: rgb(255, 76, 83);
+        }
+      }
+    }
+  }
+  .mint-cell--largetitle {
+    .mint-cell-wrapper {
+      .mint-cell-text {
+        font-size: 17px;
+        color: #676466;
+      }
+    }
+  }
+  .mint-cell--noborder {
+    .mint-cell-wrapper {
+      border: none;
+    }
+  }
+}
+.page-bottom {
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  background: white;
+  .page-bottom-left {
+    padding: 15px 0;
+    flex: 2;
+    background: rgb(231, 231, 231);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 76, 83);
+    font-weight: 200;
+    font-size: 15px;
+  }
+  .page-bottom-right {
+    flex: 2;
+    background: rgb(255, 76, 83);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 15px;
+    font-weight: 200;
+  }
+}
+.page-bottom-area {
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 5px 10px;
+  margin-top: 25px;
+  .mint-button {
+    font-size: 15px;
+  }
+  .mint-button--primary {
+    background: #ff4c53;
+  }
+}
+
+.mint-toast,
+.mint-toast.is-placemiddle,
+.mint-indicator,
+.mint-indicator-wrapper {
+  z-index: 9999 !important;
+}
+
+.mint-cell:last-child {
+  background: none;
+}
+
+div .mint-cell:last-child {
+  background: none;
+}
