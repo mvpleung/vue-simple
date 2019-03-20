@@ -5,24 +5,24 @@
   "author": "mvpleung",
   "private": true,
   "scripts": {
-    "dev":
-      "cross-env NODE_ENV=development env_config=dev node build/dev-server.js",
-    "build:sit":
-      "cross-env NODE_ENV=production env_config=sit node build/build.js",
-    "build:uat":
-      "cross-env NODE_ENV=production env_config=uat node build/build.js",
-    "build:prod":
-      "cross-env NODE_ENV=production env_config=prod node build/build.js",
+    "dev": "cross-env NODE_ENV=development env_config=dev node build/dev-server.js",
+    "build:sit": "cross-env NODE_ENV=production env_config=sit node build/build.js",
+    "build:uat": "cross-env NODE_ENV=production env_config=uat node build/build.js",
+    "build:prod": "cross-env NODE_ENV=production env_config=prod node build/build.js",
     "lint-fix": "eslint --ext .js,.vue src --fix .js,.vue src",
     "lint": "eslint --ext .js,.vue src",
     "precommit": "lint-staged"
   },
   "lint-staged": {
-    "*.{js,vue}": ["eslint --ext .js,.vue src", "git add"]
+    "*.{js,vue}": [
+      "eslint --ext .js,.vue src",
+      "git add"
+    ]
   },
   "dependencies": {
     "axios": "^0.16.2",
     "es6-promise": "^4.2.4",
+    "lrz": "^4.9.40",
     "mint-ui": "^2.2.13",
     "unique-pay": "0.0.2",
     "vconsole": "^2.5.2",
@@ -99,5 +99,8 @@
     "node": ">= 6.0.0",
     "npm": ">= 3.0.0"
   },
-  "browserslist": ["iOS >= 7", "Android >= 4.1"]
+  "browserslist": [
+    "iOS >= 7",
+    "Android >= 4.1"
+  ]
 }
